@@ -2,9 +2,10 @@ import PropTypes from 'prop-types';
 import sass from './FeedbackOptions.module.scss';
 
 export const Feedback = ({ options, handleOnClick }) => {
+  const optionKeys = Object.keys(options);
   return (
     <div className={sass.feedbackList}>
-      {options.map((option, index) => {
+      {optionKeys.map((option, index) => {
         const nameBtn = option.charAt(0).toUpperCase() + option.slice(1);
         return (
           <div className={sass.btnItem} key={index}>
